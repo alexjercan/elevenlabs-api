@@ -35,9 +35,7 @@ impl From<ureq::Error> for Error {
                 let error_msg = response.into_json::<Json>().unwrap();
                 Error::ApiError(status, format!("{error_msg}"))
             }
-            ureq::Error::Transport(e) => {
-                Error::RequestError(e.to_string())
-            }
+            ureq::Error::Transport(e) => Error::RequestError(e.to_string()),
         }
     }
 }
