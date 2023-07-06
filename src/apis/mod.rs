@@ -20,7 +20,9 @@ pub enum Error {
 impl Display for Error {
     fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
         match self {
-            Error::ApiError(status, msg) => write!(f, "API responded with status {} error: {}", status, msg),
+            Error::ApiError(status, msg) => {
+                write!(f, "API responded with status {} error: {}", status, msg)
+            }
             Error::RequestError(msg) => write!(f, "Request error: {}", msg),
         }
     }

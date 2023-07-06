@@ -9,16 +9,13 @@ impl Requests for Elevenlabs {
     fn post(&self, sub_url: &str, body: Json) -> ApiResult<Vec<u8>> {
         info!("===> 🚀\n\tPost api: {sub_url}, body: {body}");
 
-        let req = self
+        let response = self
             .agent
             .post(&(self.api_url.clone() + sub_url))
             .set("accept", "audio/mpeg")
             .set("xi-api-key", &self.auth.api_key)
-            .set("Content-Type", "application/json");
-
-        println!("{:?}", req);
-
-        let response = req.send_json(&body);
+            .set("Content-Type", "application/json")
+            .send_json(&body);
 
         handle_response(response, sub_url)
     }
