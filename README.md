@@ -1,9 +1,30 @@
 # Elevenlabs API in Rust
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/alexjercan/elevenlabs-api/rust.yml?style=flat-square)
-![Crates.io](https://img.shields.io/crates/v/elevenlabs-api?style=flat-square)
-![Crates.io](https://img.shields.io/crates/d/elevenlabs-api?style=flat-square)
-![GitHub](https://img.shields.io/github/license/alexjercan/elevenlabs-api?style=flat-square)
+<div align="center">
+ <!-- Build -->
+ <img src="https://img.shields.io/github/actions/workflow/status/alexjercan/elevenlabs-api/rust.yml?style=flat-square"
+ alt="Github Worflow Status" />
+ <!-- Version -->
+ <a href="https://crates.io/crates/elevenlabs-api">
+   <img src="https://img.shields.io/crates/v/elevenlabs-api?style=flat-square"
+   alt="Crates.io version" />
+ </a>
+ <!-- Docs -->
+ <a href="https://docs.rs/elevenlabs-api">
+   <img src="https://img.shields.io/badge/docs-latest-blue.svg?style=flat-square"
+     alt="docs.rs docs" />
+ </a>
+ <!-- Downloads -->
+ <a href="https://crates.io/crates/elevenlabs-api">
+   <img src="https://img.shields.io/crates/d/elevenlabs-api?style=flat-square"
+     alt="Crates.io downloads" />
+ </a>
+ <!-- License -->
+ <a href="https://github.com/alexjercan/elevenlabs-api/blob/master/LICENSE">
+   <img src="https://img.shields.io/github/license/alexjercan/elevenlabs-api?style=flat-square"
+     alt="Crates.io downloads" />
+ </a>
+</div>
 
 A very simple Rust library for Elevenlabs API, free from complex async operations and redundant dependencies. Inspired by [openai-api](https://github.com/openai-rs/openai-api).
 
