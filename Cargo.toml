@@ -1,8 +1,13 @@
 [package]
 name = "elevenlabs-api"
 version = "0.1.0"
+authors = ["jercan_alex27@yahoo.com"]
 edition = "2021"
 license = "MIT"
+homepage = "https://github.com/alexjercan/elevenlabs-api"
+description = "A very simple Rust library for Elevenlabs API, free from complex async operations and redundant dependencies."
+keywords = ["elevenlabs-api", "elevenlabs", "api"]
+categories = ["api-bindings"]
 
 [dependencies]
 log = "0.4.19"
