@@ -1,5 +1,5 @@
 use elevenlabs_api::{
-    tts::{TtsApi, TtsBody, VoiceSettings},
+    tts::{TtsApi, TtsBody},
     *,
 };
 
@@ -10,10 +10,7 @@ fn main() {
     let tts_body = TtsBody {
         model_id: None,
         text: "Hello world".to_string(),
-        voice_settings: VoiceSettings {
-            stability: 0.5,
-            similarity_boost: 0.5,
-        },
+        voice_settings: None,
     };
 
     let tts_result = elevenlabs.tts(&tts_body, "yoZ06aMxZJJ28mfd3POQ");
