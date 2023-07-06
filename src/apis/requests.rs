@@ -40,11 +40,11 @@ fn handle_response(
             resp.into_reader()
                 .read_to_end(&mut bytes)
                 .map_err(|e| Error::RequestError(e.to_string()))?;
-            return Ok(bytes);
+            Ok(bytes)
         }
         Err(err) => {
             error!("<== ❌\n\tError api: {sub_url}");
-            return Err(Error::from(err));
+            Err(Error::from(err))
         }
     }
 }

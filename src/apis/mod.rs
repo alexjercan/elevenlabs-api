@@ -33,10 +33,10 @@ impl From<ureq::Error> for Error {
         match value {
             ureq::Error::Status(status, response) => {
                 let error_msg = response.into_json::<Json>().unwrap();
-                return Error::ApiError(status, format!("{error_msg}"));
+                Error::ApiError(status, format!("{error_msg}"))
             }
             ureq::Error::Transport(e) => {
-                return Error::RequestError(e.to_string());
+                Error::RequestError(e.to_string())
             }
         }
     }
