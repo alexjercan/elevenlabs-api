@@ -12,7 +12,7 @@ pub type ApiResult<T> = Result<T, Error>;
 #[derive(Debug)]
 pub enum Error {
     /// An Error returned by the API
-    ApiError(String),
+    ApiError(u16, String),
     /// An Error not related to the API
     RequestError(String),
 }
@@ -20,7 +20,7 @@ pub enum Error {
 impl Display for Error {
     fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
         match self {
-            Error::ApiError(msg) => write!(f, "API error: {}", msg),
+            Error::ApiError(status, msg) => write!(f, "API responded with status {} error: {}", status, msg),
             Error::RequestError(msg) => write!(f, "Request error: {}", msg),
         }
     }
@@ -31,7 +31,7 @@ impl From<ureq::Error> for Error {
         match value {
             ureq::Error::Status(status, response) => {
                 let error_msg = response.into_json::<Json>().unwrap();
-                return Error::ApiError(format!("{error_msg}"));
+                return Error::ApiError(status, format!("{error_msg}"));
             }
             ureq::Error::Transport(e) => {
                 return Error::RequestError(e.to_string());
