@@ -86,8 +86,6 @@
 //! # }
 //! ```
 //!
-//! Check the [examples](examples) folder.
-//!
 
 pub mod apis;
 pub use apis::*;
