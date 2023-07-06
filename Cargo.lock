@@ -42,7 +42,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "elevenlabs_rs"
+name = "elevenlabs-api"
 version = "0.1.0"
 dependencies = [
  "log",

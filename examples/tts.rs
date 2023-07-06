@@ -1,4 +1,4 @@
-use elevenlabs_rs::{
+use elevenlabs_api::{
     tts::{TtsApi, TtsBody, VoiceSettings},
     *,
 };
