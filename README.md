@@ -1,6 +1,6 @@
 # Elevenlabs API in Rust
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/alexjercan/elevenlabs_api/rust.yml?style=flat-square)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/alexjercan/elevenlabs-api/rust.yml?style=flat-square)
 ![Crates.io](https://img.shields.io/crates/v/elevenlabs-api?style=flat-square)
 ![Crates.io](https://img.shields.io/crates/d/elevenlabs-api?style=flat-square)
 ![GitHub](https://img.shields.io/github/license/alexjercan/elevenlabs-api?style=flat-square)
